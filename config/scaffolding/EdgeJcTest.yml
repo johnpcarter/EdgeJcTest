@@ -6,6 +6,14 @@ services:
   packages:
   - name: EdgeJcTest
     version: "1.0"
+- serviceName: edge.jctest.integrations:listMessages
+  packages:
+  - name: EdgeJcTest
+    version: "1.0"
+- serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.560
 configurationVariables:
   ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.transactionType
   : NO_TRANSACTION
