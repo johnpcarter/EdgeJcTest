@@ -1,6 +1,56 @@
 version: "1.0"
 info:
   model: int-scaffold
+services:
+- serviceName: edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:MY_MAC
+  packages:
+  - name: EdgeJcTest
+    version: "1.0"
+configurationVariables:
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.transactionType
+  : NO_TRANSACTION
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.serverName
+  : host.docker.internal
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.password
+  : "{AES}Y5IgMqjfvkgbg7p5VUZztw=="
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.minimumPoolSize
+  : "0"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.networkProtocol
+  : ""
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.trustStore
+  : ""
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.datasourceClass
+  : com.mysql.cj.jdbc.MysqlDataSource
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.portNumber
+  : "3306"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.keyStore
+  : ""
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.startupRetryCount
+  : "0"
+  artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.user: scratch
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.driverType
+  : default
+  artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionEnabled: "false"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.databaseName
+  : scratch
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.dbType
+  : MySQL
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.otherProperties
+  : loginTimeout=60;
 packages:
 - name: EdgeJcTest
   gitServerName: johnpcarter
@@ -8,3 +58,7 @@ packages:
   gitUsername: johnpcarter
   gitToken: edge.scaffolding.EdgeJcTest.johnpcarter.gitToken
   gitBranch: main
+- name: WmJDBCAdapter
+  wpmServer: https://packages.softwareag.com
+  wpmRegistry: softwareag
+  wpmToken: edge.scaffolding.WmJDBCAdapter.https://packages.softwareag.com.wpmToken
