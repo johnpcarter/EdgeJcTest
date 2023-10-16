@@ -45,13 +45,12 @@
   <value name="retry_max">0</value>
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
-    <value name="createdBy">john</value>
-    <value name="createdDate">1697123948155</value>
-    <value name="lastModifiedDate">1697123948155</value>
+    <value name="lastModifiedBy">john</value>
+    <value name="lastModifiedDate">1697442154137</value>
     <record name="edgeServer" javaclass="com.wm.util.Values">
-      <value name="id">7689c2b8e42c4d97af228dd9a995070c</value>
-      <null name="group"/>
-      <value name="name">JC_MACINTOSH</value>
+      <value name="id">cb82bd46d77641f2804845dd47ca988a</value>
+      <value name="group">default</value>
+      <value name="name">JC_MAC_TEST</value>
     </record>
     <value name="displayName">list</value>
     <value name="description"></value>
