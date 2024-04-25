@@ -1,82 +1,6 @@
 version: "1.0"
 info:
   model: int-scaffold
-services:
-- serviceName: edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:MY_MAC
-  packages:
-  - name: EdgeJcTest
-    version: "1.0"
-- serviceName: edge.jctest.integrations:listMessages
-  packages:
-  - name: EdgeJcTest
-    version: "1.0"
-- serviceName: pub.flow:debugLog
-  packages:
-  - name: WmPublic
-    version: 11.0.0.0.560
-- serviceName: edge.jctest.integrations:list
-  packages:
-  - name: EdgeJcTest
-    version: "1.0"
-- serviceName: edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:listMessages
-  packages:
-  - name: EdgeJcTest
-    version: "1.0"
-- serviceName: edge.jctest.integrations:getCurrentDate2
-  packages:
-  - name: EdgeJcTest
-    version: "1.0"
-  - name: JcPublicTools
-    version: "5.0"
-- serviceName: pub.date:getCurrentDate
-  packages:
-  - name: WmPublic
-    version: 11.0.0.0.560
-configurationVariables:
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.transactionType
-  : NO_TRANSACTION
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.blockingTimeout
-  : "1000"
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.serverName
-  : host.docker.internal
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.heartBeatInterval
-  : "0"
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.password
-  : "{AES}Y5IgMqjfvkgbg7p5VUZztw=="
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.minimumPoolSize
-  : "0"
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.networkProtocol
-  : ""
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.expireTimeout
-  : "1000"
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.trustStore
-  : ""
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.datasourceClass
-  : com.mysql.cj.jdbc.MysqlDataSource
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.poolable
-  : "false"
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.portNumber
-  : "3306"
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.keyStore
-  : ""
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.poolIncrementSize
-  : "1"
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.startupRetryCount
-  : "0"
-  artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.user: scratch
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.driverType
-  : default
-  artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionEnabled: "false"
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.databaseName
-  : scratch
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.maximumPoolSize
-  : "10"
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.dbType
-  : MySQL
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.startupBackoffSecs
-  : "10"
-  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.otherProperties
-  : loginTimeout=60;
 packages:
 - name: EdgeJcTest
   gitServerName: johnpcarter
@@ -94,3 +18,138 @@ packages:
   gitUsername: johnpcarter
   gitToken: edge.scaffolding.JcPublicTools.johnpcarter.gitToken
   gitTag: v2.1.0
+services:
+- serviceName: edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:MY_MAC
+  packages:
+  - name: EdgeJcTest
+    version: "1.0"
+- serviceName: edge.jctest.integrations:listMessages
+  packages:
+  - name: EdgeJcTest
+    version: "1.0"
+  - name: JcPublicTools
+    version: "5.0"
+- serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.804
+- serviceName: edge.jctest.integrations:list
+  packages:
+  - name: EdgeJcTest
+    version: "1.0"
+  - name: JcPublicTools
+    version: "5.0"
+- serviceName: edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:listMessages
+  packages:
+  - name: EdgeJcTest
+    version: "1.0"
+  - name: JcPublicTools
+    version: "5.0"
+- serviceName: edge.jctest.integrations:getCurrentDate2
+  packages:
+  - name: EdgeJcTest
+    version: "1.0"
+  - name: JcPublicTools
+    version: "5.0"
+- serviceName: pub.date:getCurrentDate
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.804
+- serviceName: edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:MAC
+  packages:
+  - name: EdgeJcTest
+    version: "1.0"
+  - name: JcPublicTools
+    version: "5.0"
+- serviceName: pub.date:getCurrentDateString
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.804
+configurationVariables:
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.minimumPoolSize
+  : "0"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.trustStore
+  : ""
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.datasourceClass
+  : com.mysql.cj.jdbc.MysqlDataSource
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionSettings.databaseName
+  : scratch
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionSettings.datasourceClass
+  : com.mysql.cj.jdbc.MysqlDataSource
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.keyStore
+  : ""
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionSettings.password
+  : "{AES}Y5IgMqjfvkgbg7p5VUZztw=="
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.startupRetryCount
+  : "0"
+  artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.user: scratch
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.driverType
+  : default
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionSettings.keyStore
+  : ""
+  artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionEnabled: "false"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.dbType
+  : MySQL
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionSettings.portNumber
+  : "3306"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionSettings.trustStore
+  : ""
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.otherProperties
+  : loginTimeout=60;
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.transactionType
+  : NO_TRANSACTION
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.serverName
+  : host.docker.internal
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.password
+  : "{AES}aYrXC43dTWsDUHRWG5mhTA=="
+  artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionSettings.user: scratch
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.networkProtocol
+  : ""
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionSettings.serverName
+  : mysql
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionSettings.transactionType
+  : NO_TRANSACTION
+  artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionEnabled: "false"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionSettings.driverType
+  : default
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.portNumber
+  : "3306"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionSettings.networkProtocol
+  : ""
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MY_MAC.connectionSettings.databaseName
+  : scratch
+  artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionSettings.dbType: MySQL
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionManagerSettings.minimumPoolSize
+  : "0"
+  ? artConnection.EdgeJcTest.edge.jctest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.MAC.connectionSettings.otherProperties
+  : loginTimeout=60;
